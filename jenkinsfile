@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+  stages {
+    stage('Compile') {
+      steps {
+        ssh 'compile'
+            }
+                     }
+    stage('Test') {
+      steps {
+        ssh 'test'
+            }
+                     }
+    stage('Package') {
+      steps {
+        ssh 'package'
+            }
+                     }
+         }
+         }
